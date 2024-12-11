@@ -1,0 +1,14 @@
+<div style="display: flex;">
+  <ul>
+    <li *ngFor="let data of observation?.Datas" (click)="onSelect(data)">
+      {{ data.SamplingTime }}
+    </li>
+  </ul>
+  <div *ngIf="selectedData">
+    <div *ngFor="let property of selectedData.Properties">
+      <label>{{ property.Label }}: </label>
+      <input [(ngModel)]="property.Value" />
+    </div>
+    <button (click)="save()">Save</button>
+  </div>
+</div>

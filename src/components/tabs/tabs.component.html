@@ -1,0 +1,11 @@
+<div>
+    <button (click)="showSummary()">Summary View</button>
+    <button (click)="showDetails()">Detailed View</button>
+  </div>
+  <div *ngIf="view === 'summary'">
+    <app-summary-view></app-summary-view>
+  </div>
+  <div *ngIf="view === 'details'">
+    <app-detailed-view></app-detailed-view>
+  </div>
+  

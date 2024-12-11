@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Sampling Time</th>
+      <th>Project Name</th>
+      <th>Construction Count</th>
+      <th>Is Construction Completed</th>
+      <th>Length of the Road</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of observation?.Datas">
+      <td>{{ data.SamplingTime }}</td>
+      <td>{{ data.Properties[0]?.Value }}</td>
+      <td>{{ data.Properties[1]?.Value }}</td>
+      <td>{{ data.Properties[2]?.Value }}</td>
+      <td>{{ data.Properties[3]?.Value }}</td>
+    </tr>
+  </tbody>
+</table>
